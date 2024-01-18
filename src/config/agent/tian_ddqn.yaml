@@ -1,0 +1,24 @@
+# @package _global_
+agent: tian_ddqn
+number_of_parallel_envs: 8
+update_target_every: 3125 #3125
+replay_size: 100000
+distance_normalization: 3000.0
+
+
+epsilon_initial: 1.0 #number of steps until the epsilon decay starts
+epsilon_min: 0.01 #minimum value of epsilon (e.g. 0.01)
+epsilon_decay_start: 10000 #number of steps until the epsilon decay starts
+steps_till_min_epsilon: 5000000 #steps until the minimum epsilon value should be reached (e.g. 200.000)
+epsilon_decay: exp #exp or linear
+
+max_epoch: 40
+step_per_epoch: 200000
+step_per_collect: 32 #train_every
+batch_size: 256
+
+model_optimizer: { optimizer: RMSprop ,lr: 0.0001, alpha: 0.99} #0.0012
+
+
+defaults:
+  - model: tian/grcn

@@ -1,0 +1,9 @@
+name: GRCN
+grcn:
+  rnn: False
+  add_distance_to_action: True
+  resource_embedding_dim: 512
+  q_net : {hidden_size : 512, number_of_layers: 4, activation: ReLU, activation_after_last_layer : False}
+  resource_embedding_net : {hidden_size : 512, number_of_layers: 4, activation: ReLU}
+  use_nn_scaling : True
+  scaling_net: { hidden_size: 64, number_of_layers: 2, activation: Sigmoid }

@@ -1,0 +1,6 @@
+# @package _global_
+experiment_name: "greedy_single"
+
+observation: FullObservationACO
+defaults:
+  - override /agent: greedy_single

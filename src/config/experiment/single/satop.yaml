@@ -1,0 +1,27 @@
+# @package _global_
+experiment_name: "satop"
+number_of_agents: 1
+shared_agent : True
+early_stopping: True
+add_other_agents_targets_to_resource: False
+add_current_position_of_other_agents: False #add the current position of other agents
+add_route_positions: False #add a flag four every resource on the current route of an agent
+
+#non agent specific
+do_not_use_fined_status: False #treat fined resources as occupied
+optimistic_in_violation: True
+add_x_y_position_of_resource: True
+
+observation: FullObservationTianGraph
+shared_reward: False
+create_observation_between_steps: False
+move_other_agents_between_edges: False
+
+
+#model_optimizer: { optimizer: Adam ,lr: 0.00001 }
+model_optimizer: { optimizer: RMSprop ,lr: 0.0001, alpha: 0.99} #0.0012
+
+batch_size: 256
+defaults:
+  - override /agent: tian_ddqn
+  - override /agent/model@model: tian/satop

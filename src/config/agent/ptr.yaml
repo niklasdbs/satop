@@ -1,0 +1,21 @@
+# @package _global_
+agent: ptr
+number_of_parallel_envs: 1
+observation: FullObservationACO
+
+
+validation_iterations: 1
+iterations_per_epoch: 1000
+number_of_epochs: 260
+
+batch_size: 128
+use_whole_path: True
+encode_future: True
+use_current_mask: False
+
+lr: 0.0001
+lr_critic: 0.0001
+
+
+defaults:
+  - model: ptr_model

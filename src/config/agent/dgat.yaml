@@ -1,0 +1,20 @@
+# @package _global_
+agent: dgat
+number_of_parallel_envs: 1
+observation: FullObservationACO
+
+batch_size: 128
+validation_iterations: 1000
+iterations_per_epoch: 100
+number_of_epochs: 30
+max_norm: 1.0
+lr: 0.001
+use_whole_path: True
+use_all_resources: False
+use_edge_path: True
+skip_resources_not_in_violation: True
+always_update: False
+
+
+defaults:
+  - model: dgat_model

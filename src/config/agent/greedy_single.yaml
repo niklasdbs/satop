@@ -1,0 +1,4 @@
+# @package _global_
+agent: greedy_single
+number_of_parallel_envs: 1
+observation: FullObservationACO

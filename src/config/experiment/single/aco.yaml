@@ -1,0 +1,6 @@
+# @package _global_
+experiment_name: "aco"
+
+observation: FullObservationACO
+defaults:
+  - override /agent: aco

@@ -1,0 +1,11 @@
+name: ptr
+
+embed: 128
+hidden: 128
+init_min: -0.08
+init_max: 0.08
+clip_logits: 10
+softmax_T: 1.0
+n_glimpse: 1
+
+n_process: 3 #how many process in the critic

@@ -1,0 +1,7 @@
+# @package _global_
+agent: aco
+number_of_parallel_envs: 1
+observation: FullObservationACO
+
+computation_time: 0.1
+max_time: 600

@@ -1,0 +1,28 @@
+# @package _global_
+agent: tian_sac
+number_of_parallel_envs: 8
+distance_normalization: 3000.0
+
+max_epoch: 40
+step_per_epoch: 200000
+step_per_collect: 64 #32 #train_every
+batch_size: 256
+
+gamma: 0.999
+reward_normalization: False
+tau: 0.005 #soft update 0.005
+auto_alpha: False
+alpha_lr: 3.0e-4 #only if autoalpha
+alpha: 0.05
+
+actor_lr: 1.0e-5 #1.0e-5
+critic_lr: 1.0e-5 #1.0e-5
+
+
+deterministic_eval: True
+
+buffer_size: 100000
+
+
+defaults:
+  - model: tian/time_at

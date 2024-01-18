@@ -1,0 +1,20 @@
+name: TimeAT
+resource_hidden_dim: 256
+attend_resources_to_resources: True
+resource_id_embedding_dim: 64
+use_resource_id_embedding: True
+use_resource_mlp_net: True
+use_resource_batch_norm: False
+use_edge_batch_norm: False
+use_different_token_for_each_edge: True
+resource_embedding_net: {hidden_size : 256, number_of_layers: 4, activation: GELU, activation_after_last_layer : False, layer_normalization: True}
+
+edge_attention_net: {num_layers: 1}
+representation_net: {num_layers: 1}
+
+actor: {
+  independent: False,
+  before_merge_dim: 16,
+  per_output_net: {hidden_size: 256, number_of_layers: 2, layer_normalization: True, activation: GELU},
+  merge_net: {hidden_size: 512, number_of_layers: 2, layer_normalization: True, activation_after_last_layer: False, activation: GELU}
+}

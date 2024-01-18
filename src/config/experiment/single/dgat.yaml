@@ -1,0 +1,6 @@
+# @package _global_
+experiment_name: "dgat"
+
+observation: FullObservationACO
+defaults:
+  - override /agent: dgat

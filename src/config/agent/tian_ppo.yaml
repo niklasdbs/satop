@@ -1,0 +1,30 @@
+# @package _global_
+agent: tian_ppo
+number_of_parallel_envs: 8
+distance_normalization: 3000.0
+
+max_epoch: 400
+step_per_epoch: 1000000
+repeat_per_collect:  4 #10
+step_per_collect: 8000
+
+gamma: 0.999
+gae_lambda: 0.0
+advantage_normalization: False
+reward_normalization: False
+vf_coef: 0.1
+ent_coef: 0.0 #0.01
+#    :param float max_grad_norm: clipping gradients in back propagation. Default to
+
+batch_size: 128
+max_batchsize: 512
+
+model_optimizer: { optimizer: Adam ,lr: 0.00001}
+
+deterministic_eval: True
+
+buffer_size: 72000
+
+
+defaults:
+  - model: tian/time_at

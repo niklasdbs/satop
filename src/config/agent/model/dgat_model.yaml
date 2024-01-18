@@ -1,0 +1,3 @@
+name: dgat
+embed_dim: 128
+normalization: instance #batch , instance

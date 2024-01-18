@@ -1,0 +1,2 @@
+pybind11_add_module(top_env bindings.cpp)
+target_link_libraries(top_env PRIVATE top_env_lib)

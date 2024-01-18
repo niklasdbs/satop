@@ -1,0 +1,35 @@
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+torchaudio==0.12.1
+
+cloudpickle
+flake8
+gym
+matplotlib
+networkx
+numpy
+pandas
+Pillow
+scipy
+ray
+opencv-python
+osmnx
+scikit-learn
+tqdm
+pettingzoo
+crc32c
+tensorboard
+moviepy
+pyarrow
+modin
+hydra-core
+hydra-ax-sweeper
+hydra-optuna-sweeper
+hydra-submitit-launcher
+seaborn
+omegaconf
+wandb
+pytest
+jupyter #otherwise matplotlib wont work
+Cython

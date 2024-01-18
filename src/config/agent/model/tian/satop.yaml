@@ -1,0 +1,32 @@
+name: SATOP
+
+next_action_embedding: False
+use_resource_id_embedding: True
+resource_id_embedding_dim: 64
+use_per_edge_resource: True
+distance_future_aggregation: False
+use_edge_conv: True
+resource_hidden_dim: 256
+edge_aggregated_resources_hidden_dim: 256
+edge_info_hidden_dim: 256
+resource_embedding_net : {hidden_size : 256, number_of_layers: 4, activation: ELU, activation_after_last_layer: False, layer_normalization: True}
+edge_info_combination_net : {hidden_size : 1024, number_of_layers: 4, activation: ELU, activation_after_last_layer: True, layer_normalization: True}
+q_net : {hidden_size : 256, number_of_layers: 4, activation: ELU, activation_after_last_layer: False, layer_normalization: True}
+combine_resource_and_time_series_info_net : {hidden_size : 512, number_of_layers: 4, activation: ELU, activation_after_last_layer: False, layer_normalization: True}
+normalize_route_distance_aggr: False
+learnable_distance_route_norm: False
+
+number_of_edge_conv_layers: 2
+
+action_targets_only: False
+use_only_distance_in_edge_conv: False
+use_activation_after_conv: ELU #ReLU, Tanh, ELU, False
+resource_to_edge_conv_activation: False #ReLU, Tanh, ELU, False
+edge_conv_adjacency_activation: Tanh #ELU
+use_distance_to_action: True
+
+norm_sim_matrix: False
+norm_edge_conv_adj: False
+e_conv_use_norm: True
+
+edge_conv_without_route: False #set use_per_edge_resource to False
